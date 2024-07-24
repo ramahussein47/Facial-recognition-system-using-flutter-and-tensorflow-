@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "963550308940",
+    "project_id": "fras-3b491",
+    "storage_bucket": "fras-3b491.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963550308940:android:b4a04ceac2e7eee0c9a2e9",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtmN0hEGj1XN4i3e_k_cwMgxGVSXfIQ2Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
