@@ -44,18 +44,7 @@ class Firstpage extends StatelessWidget {
                       },
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    margin: EdgeInsets.symmetric(vertical: 8.0),
-                    child: ListTile(
-                      leading: Icon(Icons.settings),
-                      title: Text('Settings'),
-                      subtitle: Text('Adjust system settings and configurations.'),
-                      onTap: () {
-                        // Navigate to Settings screen
-                      },
-                    ),
-                  ),
+
                 ],
               ),
             ),
