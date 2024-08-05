@@ -19,30 +19,19 @@ class Firstpage extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: [
-                  const Card(
+                   Card(
                     elevation: 5,
                     margin: EdgeInsets.symmetric(vertical: 8.0),
                     child: ListTile(
                       leading: Icon(Icons.add_a_photo),
                       title: Text('Register Face'),
                       subtitle: Text('Capture and register a new face in the system.'),
-                      /*onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Capture_face()));
-                      },*/
-                    ),
-                  ),
-                  Card(
-                    elevation: 5,
-                    margin: EdgeInsets.symmetric(vertical: 8.0),
-                    child: ListTile(
-                      leading: Icon(Icons.search),
-                      title: const Text('Identify Face'),
-                      subtitle: Text('Identify faces by capturing and matching with the database.'),
                       onTap: () {
-
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>RecognitionScreen()));
                       },
                     ),
                   ),
+
                   Card(
                     elevation: 5,
                     margin: EdgeInsets.symmetric(vertical: 8.0),
