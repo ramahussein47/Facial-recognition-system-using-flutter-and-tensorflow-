@@ -1,5 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:project/sidemenufiles/Bargraph/Records/records.dart';
 import 'package:project/sidemenufiles/Capture_face.dart';
 
 class Firstpage extends StatelessWidget {
@@ -21,6 +22,7 @@ class Firstpage extends StatelessWidget {
                 children: [
                    Card(
                     elevation: 5,
+
                     margin: EdgeInsets.symmetric(vertical: 8.0),
                     child: ListTile(
                       leading: Icon(Icons.add_a_photo),
@@ -40,7 +42,7 @@ class Firstpage extends StatelessWidget {
                       title: const Text('View Records'),
                       subtitle: Text('View the list of registered faces and past activities.'),
                       onTap: () {
-                        // Navigate to View Records screen
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> Records_Page()));
                       },
                     ),
                   ),

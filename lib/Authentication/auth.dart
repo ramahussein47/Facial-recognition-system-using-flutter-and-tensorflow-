@@ -1,7 +1,7 @@
-import 'package:firebase_auth/firebase_auth.dart';
+/*import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project/login.dart';
-import 'package:project/sidemenufiles/Dashboard.dart';
+
 
 class Auth_page extends StatefulWidget {
   const Auth_page({super.key});
@@ -19,7 +19,7 @@ stream:FirebaseAuth.instance.authStateChanges(),
 
 builder:(context,snapshot){
    if(snapshot.hasData){
-      return Homepage();
+     // return Homepage();
    }
    else{
       return LoginPage();
@@ -29,3 +29,16 @@ builder:(context,snapshot){
     );
   }
 }
+*/
+
+
+//integration with ui
+//
+/*performFaceRecognition(Face face) {
+  Uint8List croppedFace = _cropFaceFromImage(face);
+  Recognition recognition = recognizer.recognizeFace(croppedFace);
+
+  // Optionally show face registration dialog
+  showFaceRegistrationDialogue(croppedFace, recognition);
+}
+*/
