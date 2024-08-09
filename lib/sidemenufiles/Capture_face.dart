@@ -167,20 +167,22 @@ class _HomePageState extends State<RecognitionScreen> {
     );
   }
 
-  // Draw rectangles around detected faces
- drawRectangleAroundFaces() async {
+drawRectangleAroundFaces() async {
   if (_image != null) {
     try {
       // Read the image bytes
       final imageBytes = await _image!.readAsBytes();
 
       // Decode the image
-      image = await decodeImageFromList(imageBytes);
+      final decodedImage = await decodeImageFromList(imageBytes);
 
-      if (image != null) {
+      if (decodedImage != null) {
         setState(() {
-          // Ensure faces are also updated here if necessary
-          faces;
+          // Update the image and faces if necessary
+          image = decodedImage;
+
+          // Make sure to update faces here if you need to.
+          // For example: faces = _detectFaces(decodedImage);
         });
       } else {
         print("Failed to decode the image.");
@@ -192,6 +194,7 @@ class _HomePageState extends State<RecognitionScreen> {
     print("No image selected.");
   }
 }
+
 
 
   @override
@@ -213,16 +216,30 @@ class _HomePageState extends State<RecognitionScreen> {
               : Container(
                   margin: const EdgeInsets.only(
                       top: 60, left: 30, right: 30, bottom: 0),
-                  child: FittedBox(
-                    child: SizedBox(
-                      width: image.width.toDouble(),
-                      height: image.width.toDouble(),
-                      child: CustomPaint(
-                        painter: FacePainter(
-                            facesList: faces, imageFile: image),
-                      ),
-                    ),
-                  ),
+  child: image != null
+  ? FittedBox(
+      child: SizedBox(
+        width: image.width.toDouble(),
+        height: image.width.toDouble(),
+        child: CustomPaint(
+          painter: FacePainter(
+            facesList: faces,
+            imageFile: image,
+          ),
+        ),
+      ),
+    )
+  : Container(
+
+      height: 200, // or any other size you deem appropriate
+      width: 200,  // or any other size you deem appropriate
+      color: Colors.grey[300], // Placeholder color or any other widget
+      child: Center(
+        child: Text("No image selected"),
+      ),
+    ),
+
+
                 ),
           Container(
             margin: const EdgeInsets.only(top: 100),
