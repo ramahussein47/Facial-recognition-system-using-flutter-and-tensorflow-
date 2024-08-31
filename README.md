@@ -1,6 +1,7 @@
 # project
 
-A new Flutter project.
+
+A facial recognition system utilizing Google ML Kit and Firebase, designed to capture facial images, extract facial embeddings, and securely store them in a Firebase database for accurate identification and verification
 
 ## Getting Started
 
